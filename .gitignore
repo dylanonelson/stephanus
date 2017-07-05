@@ -1,0 +1,6 @@
+.*.s[a-z]?
+.s[a-z]?
+/api/flask/
+/site/node_modules/
+/site/dist/*bundle*
+/site/builds/
