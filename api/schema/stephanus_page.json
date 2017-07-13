@@ -22,12 +22,16 @@
           "type": "boolean"
         },
         "speaker": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
+          "oneOf": [{
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
             }
-          }
+          }, {
+              "type": "boolean"
+          }]
         },
         "type": {
           "type": "string"
