@@ -4,17 +4,6 @@
     "paragraph": {
       "type": "object",
       "properties": {
-        "speaker": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            }
-          }
-        },
-        "type": {
-          "type": "string"
-        },
         "content": {
           "type": "array",
           "items": {
@@ -28,8 +17,28 @@
               }
             }
           }
+        },
+        "continued": {
+          "type": "boolean"
+        },
+        "speaker": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "type": {
+          "type": "string"
         }
-      }
+      },
+      "required": [
+        "content",
+        "continued",
+        "speaker",
+        "type"
+      ]
     }
   },
   "type": "object",
@@ -37,7 +46,7 @@
     "content": {
       "type": "array",
       "items": {
-        "allOf": [{
+        "anyOf": [{
           "$ref": "#/descriptions/paragraph"
         }]
       }
