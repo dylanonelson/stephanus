@@ -20,5 +20,35 @@
       "name": "Σωκράτης"
     },
     "type": "paragraph"
+  }, {
+    "content": [{
+      "type": "text",
+      "text": "οὐ γὰρ κακῶς δοξάζεις, ἦν δʼ ἐγώ."
+    }],
+    "continued": false,
+    "speaker": {
+      "name": "Σωκράτης"
+    },
+    "type": "paragraph"
+  }, {
+    "content": [{
+      "type": "text",
+      "text": "ὁρᾷς οὖν ἡμᾶς, ἔφη, ὅσοι ἐσμέν;"
+    }],
+    "continued": false,
+    "speaker": {
+      "name": "Σωκράτης"
+    },
+    "type": "paragraph"
+  }, {
+    "content": [{
+      "type": "text",
+      "text": "πῶς γὰρ οὔ;"
+    }],
+    "continued": false,
+    "speaker": {
+      "name": "Σωκράτης"
+    },
+    "type": "paragraph"
   }]
 }
