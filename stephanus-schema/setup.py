@@ -7,5 +7,5 @@ setup(name='Stephanus Schema',
       description='JSON Schema for Platonic texts',
       author='Dylan Nelson',
       author_email='dylanonelson@gmail.com'
-      packages=['schema'],
+      packages=['stephanus-schema'],
      )
