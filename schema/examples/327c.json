@@ -50,5 +50,55 @@
       "name": "Σωκράτης"
     },
     "type": "paragraph"
+  }, {
+    "content": [{
+      "type": "text",
+      "text": "ἢ τοίνυν τούτων, ἔφη, κρείττους γένεσθε ἢ μένετʼ αὐτοῦ."
+    }],
+    "continued": false,
+    "speaker": {
+      "name": "Σωκράτης"
+    },
+    "type": "paragraph"
+  }, {
+    "content": [{
+      "type": "text",
+      "text": "οὐκοῦν, ἦν δʼ ἐγώ, ἔτι ἓν λείπεται, τὸ ἢν πείσωμεν ὑμᾶς ὡς χρὴ ἡμᾶς ἀφεῖναι;"
+    }],
+    "continued": false,
+    "speaker": {
+      "name": "Σωκράτης"
+    },
+    "type": "paragraph"
+  }, {
+    "content": [{
+      "type": "text",
+      "text": "ἦ καὶ δύναισθʼ ἄν, ἦ δʼ ὅς, πεῖσαι μὴ ἀκούοντας;"
+    }],
+    "continued": false,
+    "speaker": {
+      "name": "Σωκράτης"
+    },
+    "type": "paragraph"
+  }, {
+    "content": [{
+      "type": "text",
+      "text": "οὐδαμῶς, ἔφη ὁ Γλαύκων."
+    }],
+    "continued": false,
+    "speaker": {
+      "name": "Σωκράτης"
+    },
+    "type": "paragraph"
+  }, {
+    "content": [{
+      "type": "text",
+      "text": "ὡς τοίνυν μὴ ἀκουσομένων, οὕτω διανοεῖσθε."
+    }],
+    "continued": false,
+    "speaker": {
+      "name": "Σωκράτης"
+    },
+    "type": "paragraph"
   }]
 }
