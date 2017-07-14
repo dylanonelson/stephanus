@@ -1,6 +1,6 @@
 .*.s[a-z]?
 .s[a-z]?
 venv/
-/site/node_modules/
-/site/dist/*bundle*
-/site/builds/
+node_modules/
+dist/
+builds/
