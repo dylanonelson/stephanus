@@ -1,3 +1,4 @@
 manage.py
 jsonschema
 termcolor
+pytest
