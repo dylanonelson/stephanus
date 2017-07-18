@@ -15,15 +15,16 @@ def test():
     pytest.main()
 
 @manager.command
-def install(pkg):
+def install(pkg=None):
     dir = os.path.dirname(__file__)
-
     reqs_to_frz = os.path.join(dir, 'requirements-to-freeze.txt')
-    with open(reqs_to_frz, 'a') as f:
-        f.write(pkg)
+    reqs = os.path.join(dir, 'requirements.txt')
+
+    if pkg != None:
+        with open(reqs_to_frz, 'a') as f:
+            f.write(pkg)
 
     pip.main(['install', '-r', reqs_to_frz])
-    reqs = os.path.join(dir, 'requirements.txt')
     p = Popen(['pip', 'freeze', '-r', reqs_to_frz], stdout=PIPE)
     (out, err) = p.communicate()
 
