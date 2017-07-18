@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "continued": {
+      "type": "boolean"
+    },
+    "speaker": {
+      "oneOf": [{
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      }, {
+          "type": "boolean"
+      }]
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "content",
+    "continued",
+    "speaker",
+    "type"
+  ]
+}

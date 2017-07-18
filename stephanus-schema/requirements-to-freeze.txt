@@ -3,3 +3,4 @@ jsonschema
 termcolor
 pytest
 pytest-watch
+jsonref
