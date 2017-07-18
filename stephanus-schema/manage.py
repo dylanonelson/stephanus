@@ -22,7 +22,7 @@ def install(pkg=None):
 
     if pkg != None:
         with open(reqs_to_frz, 'a') as f:
-            f.write(pkg)
+            f.write(f"\n{pkg}")
 
     pip.main(['install', '-r', reqs_to_frz])
     p = Popen(['pip', 'freeze', '-r', reqs_to_frz], stdout=PIPE)
