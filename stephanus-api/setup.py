@@ -2,10 +2,10 @@
 
 from distutils.core import setup
 
-setup(name='Stephanus Schema',
+setup(name='Stephanus API',
       version='0.1dev',
-      description='JSON Schema for Platonic texts',
+      description='REST API for Stephanus pages',
       author='Dylan Nelson',
       author_email='dylanonelson@gmail.com'
-      packages=['schema'],
+      packages=['app'],
      )

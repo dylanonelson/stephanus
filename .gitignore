@@ -1,5 +1,6 @@
 .*.s[a-z]?
 .s[a-z]?
+__pycache__
 venv/
 node_modules/
 dist/
