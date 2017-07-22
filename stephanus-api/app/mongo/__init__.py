@@ -1,10 +1,14 @@
 from pymongo import MongoClient
 
 from app.parser import parse_rep_xml
+from app import app
 
-client = MongoClient()
+mongo_url = app.config['MONGO_URL']
+mongo_db = app.config['MONGO_DB_NAME']
 
-db = client.stephanus
+client = MongoClient(mongo_url)
+
+db = client[mongo_db]
 
 pages = db.pages
 
