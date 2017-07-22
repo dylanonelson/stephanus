@@ -1,4 +1,5 @@
-from .context import parser, stephanus_schema
+from .context import parser
+import stephanus_schema
 import pytest
 
 def test_parse_book_one():
