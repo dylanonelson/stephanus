@@ -1,5 +1,6 @@
 #!flask/bin/python
 from flask import Flask
+from app.mongo import db
 
 app = Flask(__name__)
 

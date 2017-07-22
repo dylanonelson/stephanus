@@ -3,3 +3,4 @@ pytest
 flask
 pymongo
 pytest-watch
+stephanus_schema
