@@ -1,5 +1,5 @@
 manage.py
 pytest
 flask
-
 pymongo
+pytest-watch
