@@ -1,7 +1,9 @@
+*.egg-info
 .*.s[a-z]?
+.cache
 .s[a-z]?
 __pycache__
-venv/
-node_modules/
-dist/
 builds/
+dist/
+node_modules/
+venv/
