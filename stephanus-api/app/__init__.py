@@ -1,8 +1,13 @@
 #!flask/bin/python
 from flask import Flask, jsonify
 from app.mongo import db
+import os
 
 app = Flask(__name__)
+
+app_env = os.environ.get('PYTHON_ENV')
+app_env = app_env if app_env != None else 'development'
+app.config.from_object(f"app.config.{app_env}")
 
 @app.route('/')
 def index():
