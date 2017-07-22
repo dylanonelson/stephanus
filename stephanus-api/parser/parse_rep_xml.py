@@ -1,6 +1,10 @@
 import json
 import os
+import re
 import xml.etree.ElementTree as ET
+
+def clean_whitespace(text):
+    return re.sub(r'\s+', ' ', text)
 
 def parse_book_one():
     dir = os.path.dirname(__file__)
@@ -28,12 +32,16 @@ def parse_book_one():
                                    'continued': True,
                                    'content': continued_text,
                                    'speaker': { 'name': said_who}}
-            continued_text.append({'type': 'text', 'text': said.text})
+
+            continued_text.append({'type': 'text',
+                                   'text': clean_whitespace(said.text)})
+
             page_content.append(continued_paragraph)
 
             for child in said.findall('milestone[@unit=\'para\']'):
                 text_nodes = []
-                text_nodes.append({'type': 'text', 'text': child.tail})
+                text_nodes.append({'type': 'text',
+                                   'text': clean_whitespace(child.tail)})
                 paragraph = {'type': 'paragraph',
                              'continued': False,
                              'speaker': {'name': said_who},
