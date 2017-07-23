@@ -2,10 +2,10 @@
 *.pyc
 .*.s[a-z]?
 .cache
+.kube.sec.yml
 .s[a-z]?
 __pycache__
 builds/
 dist/
-dockerenv.txt
 node_modules/
 venv/
