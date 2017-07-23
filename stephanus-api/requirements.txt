@@ -18,6 +18,5 @@ marshmallow==2.13.5
 pathtools==0.1.2
 py==1.4.34
 PyYAML==3.12
--e git+git@github.com:dylanonelson/stephanus.git@bc6e633e86f388719235498b9b63c91d1a70283e#egg=Stephanus_Schema&subdirectory=stephanus-schema
 watchdog==0.8.3
 Werkzeug==0.12.2
