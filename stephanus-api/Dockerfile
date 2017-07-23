@@ -8,4 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+EXPOSE 5000
+
+ENV PYTHON_ENV production
+
 CMD [ "python", "./run.py" ]
