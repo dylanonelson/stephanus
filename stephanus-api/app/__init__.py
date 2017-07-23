@@ -2,7 +2,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from webargs import fields
-from webargs.core import Parser
+from webargs.core import ValidationError
 from webargs.flaskparser import use_args
 import os
 
@@ -35,6 +35,9 @@ def index(args):
 
 @app.route('/<page>')
 def page(page):
+    if has_stephanus_shape(page) == False:
+        raise ValidationError('Invalid format for Stephanus page')
+
     match = db.pages.find_one({'id': page}, {'_id': 0})
     resp = jsonify(match)
     resp.status_code = 200
