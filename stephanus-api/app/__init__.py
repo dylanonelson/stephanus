@@ -1,11 +1,14 @@
 #!flask/bin/python
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from webargs import fields
 from webargs.core import Parser
 from webargs.flaskparser import use_args
 import os
 
 app = Flask(__name__)
+
+CORS(app)
 
 app_env = os.environ.get('PYTHON_ENV')
 app_env = app_env if app_env != None else 'development'

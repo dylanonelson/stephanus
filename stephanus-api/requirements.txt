@@ -9,6 +9,7 @@ click==6.7
 colorama==0.3.9
 docopt==0.6.2
 Flask==0.12.2
+Flask-Cors==3.0.3
 itsdangerous==0.24
 Jinja2==2.9.6
 jsonref==0.1
@@ -18,5 +19,6 @@ marshmallow==2.13.5
 pathtools==0.1.2
 py==1.4.34
 PyYAML==3.12
+six==1.10.0
 watchdog==0.8.3
 Werkzeug==0.12.2
