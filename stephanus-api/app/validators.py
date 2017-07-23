@@ -2,7 +2,7 @@ from app import app
 import re
 
 def has_stephanus_shape(s):
-    r = r'\d{1,3}[a-e]'
+    r = r'^\d{1,3}[a-e]$'
     return re.match(r, s) != None
 
 def validate_min_page(f):
