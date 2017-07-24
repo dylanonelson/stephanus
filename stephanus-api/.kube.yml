@@ -1,0 +1,42 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+
+metadata:
+  name: stephanus-api
+
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: stephanus-api
+    spec:
+      containers:
+        - name: stephanus-api
+          image: "gcr.io/stephanus-174601/stephanus-api:latest"
+          ports:
+            - containerPort: 8080
+          env:
+            - name: MONGO_USER
+              valueFrom:
+                secretKeyRef:
+                  name: stephanus-api-secrets
+                  key: MONGO_USER
+            - name: MONGO_PW
+              valueFrom:
+                secretKeyRef:
+                  name: stephanus-api-secrets
+                  key: MONGO_PW
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: stephanus-api-service
+spec:
+  selector:
+    app: stephanus-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer

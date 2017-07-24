@@ -1,6 +1,11 @@
+*.egg-info
+*.pyc
 .*.s[a-z]?
+.cache
+.kube.sec.yml
 .s[a-z]?
-venv/
-node_modules/
-dist/
+__pycache__
 builds/
+dist/
+node_modules/
+venv/

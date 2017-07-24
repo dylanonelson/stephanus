@@ -1,0 +1,7 @@
+manage.py
+pytest
+flask
+flask-cors
+pymongo
+pytest-watch
+webargs
