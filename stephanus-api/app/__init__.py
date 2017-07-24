@@ -17,12 +17,17 @@ app.config.from_object(f"app.config.{app_env}")
 from .validators import *
 from app.mongo import db
 
-index_args = {'from': fields.Str(required=True, validate=validate_min_page),
-              'to': fields.Str(required=True, validate=validate_max_page)}
-
 @app.route('/')
-@use_args(index_args)
-def index(args):
+def index():
+    return (f"Query for pages between {app.config['MINIMUM_STEPHANUS_PAGE']} "
+            f"and {app.config['MAXIMUM_STEPHANUS_PAGE']} at /:page or /?from="
+            "[page]&to=[page]")
+
+range_args = {'from': fields.Str(required=True, validate=validate_min_page),
+              'to': fields.Str(required=True, validate=validate_max_page)}
+@app.route('/pages')
+@use_args(range_args)
+def pages(args):
     from_page = args.get('from')
     to_page = args.get('to')
     query = {'$where': f"(this.id >= '{from_page}' && this.id <= '{to_page}')"}
