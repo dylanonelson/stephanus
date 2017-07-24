@@ -5,3 +5,4 @@ flask-cors
 pymongo
 pytest-watch
 webargs
+gunicorn

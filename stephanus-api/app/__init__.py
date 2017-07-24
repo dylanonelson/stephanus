@@ -42,3 +42,6 @@ def page(page):
     resp = jsonify(match)
     resp.status_code = 200
     return resp
+
+if __name__ == '__main__':
+    app.run(app.config['HOST'], port=app.config['PORT'])

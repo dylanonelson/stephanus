@@ -12,4 +12,4 @@ EXPOSE 8080
 
 ENV PYTHON_ENV=production
 
-CMD [ "python", "./run.py" ]
+CMD [ "gunicorn", "-b", "0.0.0.0:8080", "app:app" ]
